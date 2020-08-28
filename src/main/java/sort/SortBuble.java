@@ -1,3 +1,5 @@
+package sort;
+
 public class SortBuble {
     public void bubbleSort(int[] a) {
         boolean sorted = false;

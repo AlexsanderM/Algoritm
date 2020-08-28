@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="BranchesTreeState">
     <expand>
       <path>
@@ -20,12 +23,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="02252962-6453-44a1-9621-c3ccf368365f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Algorithm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/Algoritm.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Algoritm.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/sort/QuickSort.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/sort/SelectionSort.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/sort/practic/BigNumber.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Algorithm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Algorithm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/SortBuble.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sort/SortBuble.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,6 +54,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1563479436839" />
@@ -57,7 +63,7 @@
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.BigNumber">
     <configuration name="Algorithm" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="ALTERNATIVE_JRE_PATH" value="14" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
@@ -67,8 +73,33 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="BigNumber" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="sort.practic.BigNumber" />
+      <module name="Algoritm" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="sort.practic.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.BigNumber" />
         <item itemvalue="Application.Algorithm" />
       </list>
     </recent_temporary>
@@ -98,6 +129,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
     <state x="443" y="96" width="1024" height="840" key="#Project_Structure" timestamp="1598527599535">
@@ -112,9 +144,60 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="743" y="277" width="424" height="479" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1598527597059" />
+    <state width="1878" height="341" key="GridCell.Tab.0.bottom" timestamp="1598570124045">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1878" height="274" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1598567516538" />
+    <state width="1878" height="341" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1598570124045" />
+    <state width="1878" height="341" key="GridCell.Tab.0.center" timestamp="1598570124044">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1878" height="274" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1598567516536" />
+    <state width="1878" height="341" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1598570124044" />
+    <state width="1878" height="341" key="GridCell.Tab.0.left" timestamp="1598570124043">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1878" height="274" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1598567516535" />
+    <state width="1878" height="341" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1598570124043" />
+    <state width="1878" height="341" key="GridCell.Tab.0.right" timestamp="1598570124045">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1878" height="274" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1598567516537" />
+    <state width="1878" height="341" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1598570124045" />
+    <state width="1878" height="341" key="GridCell.Tab.1.bottom" timestamp="1598570124046">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1878" height="341" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1598566935429" />
+    <state width="1878" height="341" key="GridCell.Tab.1.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1598570124046" />
+    <state width="1878" height="341" key="GridCell.Tab.1.center" timestamp="1598570124045">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1878" height="341" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1598566935428" />
+    <state width="1878" height="341" key="GridCell.Tab.1.center/0.0.1920.1080@0.0.1920.1080" timestamp="1598570124045" />
+    <state width="1878" height="341" key="GridCell.Tab.1.left" timestamp="1598570124045">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1878" height="341" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1598566935428" />
+    <state width="1878" height="341" key="GridCell.Tab.1.left/0.0.1920.1080@0.0.1920.1080" timestamp="1598570124045" />
+    <state width="1878" height="341" key="GridCell.Tab.1.right" timestamp="1598570124046">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1878" height="341" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1598566935429" />
+    <state width="1878" height="341" key="GridCell.Tab.1.right/0.0.1920.1080@0.0.1920.1080" timestamp="1598570124046" />
     <state x="443" y="96" width="1024" height="840" key="SettingsEditor" timestamp="1598527929866">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="443" y="96" width="1024" height="840" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1598527929866" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/sort/QuickSort.java</url>
+          <line>17</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
