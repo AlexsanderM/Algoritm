@@ -7,3 +7,5 @@ class SelectionSort
 class SortBuble
 ### Quick sort:
 class QuickSort
+### Поразрядная сортировка
+class RadixSort
