@@ -9,3 +9,5 @@ class SortBuble
 class QuickSort
 ### Поразрядная сортировка
 class RadixSort
+### Сортировка слиянием
+class MergeSort
