@@ -20,8 +20,13 @@ public class BigNumber {
 
         List<Integer> listSortNumber = sortArrBigNumber(listNumber, 0, lengthArr - 1);
 
-        for (Integer i : listSortNumber)
-            System.out.print(i);
+        if (listSortNumber.size() > 0 && listSortNumber.get(0) == 0) {
+            System.out.println(0);
+        } else {
+            for (Integer i : listSortNumber) {
+                System.out.print(i);
+            }
+        }
     }
 
     public static List<Integer> sortArrBigNumber(List<Integer> listNumber, int low, int high) {
@@ -29,11 +34,11 @@ public class BigNumber {
         int rightMarker = high;
         int pivot = listNumber.get((leftMarker + rightMarker) / 2);
         do {
-            while (listNumber.get(leftMarker) != pivot && isEquality(listNumber.get(leftMarker), pivot, -1)) { //*/ (listNumber.get(leftMarker) < pivot) {
+            while (listNumber.get(leftMarker) != pivot && isEquality(listNumber.get(leftMarker), pivot)) {
                 leftMarker++;
             }
 
-            while (listNumber.get(rightMarker) != pivot && !isEquality(listNumber.get(rightMarker), pivot, -1)) { //*/ (listNumber.get(rightMarker) > pivot) {
+            while (listNumber.get(rightMarker) != pivot && !isEquality(listNumber.get(rightMarker), pivot)) {
                 rightMarker--;
             }
 
@@ -52,65 +57,64 @@ public class BigNumber {
         if (leftMarker < high)
             sortArrBigNumber(listNumber, leftMarker, high);
 
-        if (low < rightMarker)
+        if (rightMarker > low)
             sortArrBigNumber(listNumber, low, rightMarker);
 
         return listNumber;
     }
 
-    private static boolean isEquality(int num, int opora, int firstNumber) {
-        int firstNum = num;
-        int firstOpora = opora;
-        int firstNumRaz = 0;
-        int firstOporaRaz = 0;
+    private static boolean isEquality(int num, int opora) {
+        int firstNum = -1;
+        int firstOpora = -1;
+        int tempNum = num;
+        int tempOpora = opora;
 
-        while (firstNum >= 10) {
-            firstNum /= 10;
-            firstNumRaz++;
-        }
+        while (true) {
+            int numRaz = 0;
+            int oporaRaz = 0;
 
-        while (firstOpora >= 10) {
-            firstOpora /= 10;
-            firstOporaRaz++;
-        }
-
-        if (firstNum == firstOpora) {
-            if (firstNumRaz >= 1 && firstOporaRaz >= 1) {
-                num %= (int) Math.pow(10, firstNumRaz);
-                opora %= (int) Math.pow(10, firstOporaRaz);
-
-                return isEquality(num, opora, firstNum);
-            } else if (firstNumRaz >= 1) {
-                if (firstNumber != -1)
-                    opora = firstNumber;
-
-                num %= (int) Math.pow(10, firstNumRaz);
-                int temp = num;
-
-                while (temp >= 10)
-                    temp /= 10;
-
-                if (temp == opora)
-                    isEquality(num, opora, firstNumber);
-
-                return temp > opora;
-            } else if (firstOporaRaz >= 1) {
-//                if (firstNumber != 1)
-//                    num = firstNumber;
-
-                opora %= (int) Math.pow(10, firstOporaRaz);
-                int temp = opora;
-
-                while (temp >= 10)
-                    temp /= 10;
-
-                if (temp == num)
-                    isEquality(num, opora, firstNumber);
-
-                return temp < num;
+            while (tempNum >= 10) {
+                tempNum /= 10;
+                numRaz++;
             }
+
+            while (tempOpora >= 10) {
+                tempOpora /= 10;
+                oporaRaz++;
+            }
+
+            if (tempNum == tempOpora) {
+                if (firstNum == -1)
+                    firstNum = tempNum;
+
+                if (firstOpora == -1)
+                    firstOpora = tempOpora;
+
+                if (numRaz >= 1 && oporaRaz >= 1) {
+                    tempNum = num % (int) Math.pow(10, numRaz);
+                    tempOpora = opora % (int) Math.pow(10, oporaRaz);
+
+                    continue;
+                } else if (numRaz >= 1) {
+                   return isCompair(num, firstNum, numRaz);
+                } else if (oporaRaz >= 1) {
+                    return !isCompair(opora, firstOpora, oporaRaz);
+                }
+            }
+
+            return tempNum > tempOpora;
+        }
+    }
+
+    private static boolean isCompair(int num, int firstNum, int numRaz) {
+        num %= (int) Math.pow(10, numRaz);
+        int tempNum = num >= 10 ? num/10 : num;
+
+        if (firstNum == tempNum) {
+            tempNum = num >= 10 ? num%10 : num;
+            return firstNum < tempNum;
         }
 
-        return firstNum > firstOpora;
+        return firstNum < tempNum;
     }
 }
